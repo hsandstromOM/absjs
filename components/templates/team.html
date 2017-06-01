@@ -1,0 +1,493 @@
+<div id="TeamPage" class="ng-scope">
+  <div class="page-container">
+    <div data-navheader="" data-mainpage="mainPage" data-slide="slide" class="ng-isolate-scope">
+      <div>
+        <div id="bloc-0" class="bloc bgc-white l-bloc navBig">
+          <div class="container bloc-sm">
+            <nav class="navbar navbar-default navbar-fixed-top navShadow" data-ng-class="slide.workNav ? 'navShadow' : 'noShadow' || slide.serviceNav ? 'navShadow' : 'noShadow' || slide.teamNav ? 'navShadow' : 'noShadow'" style="background-color: white;">
+              <div class="navbar-header">
+                <div class="navbar-brand" data-ui-sref="home" style="padding-left: 5vh; height: 180px;" href="/"><img src="img/ABS_logo.png" alt="logo" width="247" style="cursor: pointer; text-align: center; padding-top: 20px; padding-bottom: 20px;"></div>
+              </div>
+              <div class="navbar-collapse navbar-1 collapse hidden-md" style="box-shadow: rgba(0, 0, 0, 0.35) 1.5px 2.598px 27px 0px;">
+                <ul class="site-navigation nav navbar-nav" style="border-top: none;">
+                  <li class="bttn">
+                    <div id="team" class="tk-industry customText selectedGreen" data-ui-sref="team" data-ng-class="mainPage === 'team' ? 'active' : 'selectedGreen' " href="/team">TEAM</div>
+                  </li>
+                  <li>
+                    <div id="work" class="tk-industry customText selectedGreen" data-ui-sref="work({service: defaultWorkService})" data-ng-click="setWorkService()" data-ng-class="mainPage === 'work' ? 'active' : 'selectedGreen' " href="/work/">WORK</div>
+                  </li>
+                  <li>
+                    <div id="services" class="tk-industry customText selectedGreen" data-ng-click="setSelectedService()" data-ui-sref="services()" data-ng-class="mainPage === 'services' ? 'active' : 'selectedGreen' " href="/services/">SERVICES</div>
+                  </li>
+                  <li style="text-align: center; padding-top: 10px; padding-bottom: 10px;"><a class="tk-industry btn btn-lg btn-sq blueContact" data-ui-sref="contact" data-ng-class="page === 'contact' ? 'greenContact' : 'blueContact'" style="cursor: pointer; color: white; line-height: 21px; font-weight: bold; margin: auto; width: 180px; text-align: center; padding-top: 5px; padding-bottom: 5px;"
+                      href="/contact">CONTACT</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <nav class="navbar navbar-default navSmall" style="z-index: 20; display: none; padding-top: 10px;">
+          <div class="container-fluid">
+            <div class="navbar-header"><button class="navbar-toggle" data-toggle="collapse" data-target="#toggleNav"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              <div class="navbar-brand"
+                data-ui-sref="home" href="/"><img src="img/ABS_logo.png" alt="logo" width="247" style="cursor: pointer;"></div>
+            </div>
+            <div class="collapse navbar-collapse" id="toggleNav" style="height: 100% !important;">
+              <ul class="nav navbar-nav" style="box-shadow: rgba(0, 0, 0, 0.35) 1.5px 2.598px 27px 0px inset; margin-top: -4px; height: 100vh; border-top-style: none;">
+                <li class="dropdown" style="text-align: center;">
+                  <p data-ng-class="mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'" data-ng-click="teamDropClosed = !teamDropClosed; workDropClosed = true; serviceDropClosed = true" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px; text-transform: uppercase;"
+                    class="ltc-royal-blue-traditional">TEAM</p>
+                </li>
+                <ul class="dropMenu ng-hide" data-ng-hide="teamDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 80px; padding-left: 0px; text-align: center; width: 100%;">
+                  <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                    <div data-ui-sref="team({division: 'Architecture'})" style="cursor: pointer; border-bottom: 1px solid white; padding-top: 15px; padding-bottom: 20px; color: white; text-transform: uppercase;" href="/team">ARCHITECTURE</div>
+                  </li>
+                  <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                    <div style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; color: white; text-transform: uppercase;">
+                      <div data-ui-sref="team({division: 'Forensic Consulting'})" href="/team">FORENSIC CONSULTING</div>
+                    </div>
+                  </li>
+                  <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                    <div data-ui-sref="team({division: 'Building Enclosure'})" style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; color: white; text-transform: uppercase;" href="/team">BUILDING ENCLOSURE</div>
+                  </li>
+                  <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                    <div data-ui-sref="team({division: 'Life Safety &amp; Human Factors'})" style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; color: white; text-transform: uppercase;" href="/team">LIFE SAFETY &amp; HUMAN FACTORS</div>
+                  </li>
+                  <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                    <div data-ui-sref="team({division: 'Engineering'})" style="cursor: pointer; padding-bottom: 20px; color: white; text-transform: uppercase;" href="/team">ENGINEERING</div>
+                  </li>
+                </ul>
+                <li class="dropdown" style="text-align: center;">
+                  <p data-ng-click="workDropClosed = !workDropClosed; teamDropClosed = true; serviceDropClosed = true" data-ng-class="mainPage === 'work' ? 'active' : 'ltc-royal-blue-traditional'" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px;"
+                    class="ltc-royal-blue-traditional">WORK</p>
+                </li>
+                <ul class="dropMenu ng-hide" data-ng-hide="workDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 160px; padding-left: 0px; text-align: center; width: 100%;">
+                  <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                    <!-- ngRepeat: serviceProvided in allWorkServicesProvided -->
+                    <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                      href="/work/">Building Enclosure</div>
+                    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                    <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                      href="/work/">Forensic Consulting</div>
+                    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                    <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                      href="/work/">Life Safety &amp; Human Factors</div>
+                    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                    <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                      href="/work/">Architecture</div>
+                    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                    <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                      href="/work/">Engineering</div>
+                    <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                  </li>
+                </ul>
+                <li class="dropdown" style="text-align: center;">
+                  <p data-ng-click="serviceDropClosed = !serviceDropClosed; workDropClosed = true; teamDropClosed = true" data-ng-class="mainPage === 'services' ? 'active' : 'ltc-royal-blue-traditional'" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px;"
+                    class="ltc-royal-blue-traditional">SERVICES</p>
+                </li>
+                <ul class="dropMenu ng-hide" data-ng-hide="serviceDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 260px; padding-left: 0px; text-align: center; width: 100%;">
+                  <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                    <!-- ngRepeat: service in allServices -->
+                    <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Building Enclosure</div>
+                    <!-- end ngRepeat: service in allServices -->
+                    <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Forensic Consulting</div>
+                    <!-- end ngRepeat: service in allServices -->
+                    <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Life Safety &amp; Human Factors</div>
+                    <!-- end ngRepeat: service in allServices -->
+                    <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Architecture</div>
+                    <!-- end ngRepeat: service in allServices -->
+                    <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Engineering</div>
+                    <!-- end ngRepeat: service in allServices -->
+                  </li>
+                </ul>
+                <li style="margin-right: 10px;"><a data-ui-sref="contact" data-ng-class="page === 'contact' ? 'greenContact' : 'blueContact'" style="color: white; line-height: 5px; font-weight: bold; margin: auto; width: 140px; text-align: center; padding-top: 15px; padding-bottom: 15px;"
+                    href="/contact" class="blueContact">CONTACT</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="row subnav-navigation subnavbar slideNav slideNavUp" id="workNav" data-ng-class="slide.workNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+          <!-- ngRepeat: serviceProvided in allWorkServicesProvided -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/work/building-enclosure">
+            <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding greenNav"
+              href="/work/">Building Enclosure</div>
+          </div>
+          <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/work/forensic-consulting">
+            <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding clearNav"
+              href="/work/">Forensic Consulting</div>
+          </div>
+          <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/work/life-safety-and-human-factors">
+            <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding clearNav"
+              href="/work/">Life Safety &amp; Human Factors</div>
+          </div>
+          <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/work/architecture">
+            <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding clearNav"
+              href="/work/">Architecture</div>
+          </div>
+          <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/work/engineering">
+            <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding clearNav"
+              href="/work/">Engineering</div>
+          </div>
+          <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+        </div>
+        <div class="row subnav-navigation subnavbar slideNav slideNavUp" id="serviceNav" data-ng-class="slide.serviceNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+          <!-- ngRepeat: service in allServices -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/services/building-enclosure">
+            <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding greenNav" href="/services/">Building Enclosure</div>
+          </div>
+          <!-- end ngRepeat: service in allServices -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/services/building-enclosure">
+            <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding clearNav" href="/services/">Forensic Consulting</div>
+          </div>
+          <!-- end ngRepeat: service in allServices -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/services/building-enclosure">
+            <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding clearNav" href="/services/">Life Safety &amp; Human Factors</div>
+          </div>
+          <!-- end ngRepeat: service in allServices -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/services/building-enclosure">
+            <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding clearNav" href="/services/">Architecture</div>
+          </div>
+          <!-- end ngRepeat: service in allServices -->
+          <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+            href="/services/building-enclosure">
+            <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding clearNav" href="/services/">Engineering</div>
+          </div>
+          <!-- end ngRepeat: service in allServices -->
+        </div>
+        <div class="row subnav-navigation subnavbar slideNav slideNavDown" id="teamNav" data-ng-class="slide.teamNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+          <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+            <div data-ng-click="setDivision('Architecture')" data-ui-sref="team({division: 'Architecture'})" data-ng-class="headerDivision.current === 'ARCHITECTURE'" style="border-right: 1px solid white;" href="/team">ARCHITECTURE</div>
+          </div>
+          <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+            <div data-ng-click="setDivision('Forensic Consulting')" data-ui-sref="team({division: 'Forensic Consulting'})" data-ng-class="headerDivision.current === 'Forensic Consulting'" style="border-right: 1px solid white;" href="/team">FORENSIC CONSULTING</div>
+          </div>
+          <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+            <div data-ng-click="setDivision('Building Enclosure')" data-ui-sref="team({division: 'Building Enclosure'})" data-ng-class="headerDivision.current === 'Building Enclosure'" style="border-right: 1px solid white;" href="/team">BUILDING ENCLOSURE</div>
+          </div>
+          <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+            <div data-ng-click="setDivision('Life Safety &amp; Human Factors')" data-ui-sref="team({division: 'Life Safety &amp; Human Factors'})" data-ng-class="headerDivision.current === 'Life Safety &amp; Human Factors'" href="/team">LIFE SAFETY &amp; HUMAN FACTORS</div>
+          </div>
+          <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+            <div data-ng-click="setDivision('Engineering')" data-ui-sref="team({division: 'Engineering'})" data-ng-class="headerDivision.current === 'Engineering'" href="/team">ENGINEERING</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bloc-1" class="bloc bgc-white bg-Header-Placeholder d-bloc" style="max-height: 100vh;"><img class="honeycomb-left" src="img/honeycomb_pattern.png" style="max-height: 350px; z-index: 1; margin-left: -50px !important;"><img class="honeycomb-right" src="img/honeycomb.png" style="max-height: 540px; z-index: 1; margin-right: -50px !important;">
+      <div
+        class="row">
+        <div class="col-sm-12 vertical-align" style="margin-top: -210px; text-transform: uppercase;">
+          <h1 class="mg-md text-center vertical-align tc-white ng-binding">Team</h1></div>
+    </div>
+  </div>
+  <div id="bloc-12" class="bloc bg-Halftone-Pattern tc-prussian-blue" style="background-color: rgb(246, 246, 246); box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 8px 4px inset; height: 80%;">
+    <div class="container bloc-lg">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h3 class="tk-aaux-next mg-md text-left tc-prussian-blue" style="font-size: 24px; line-height: 28px;"><strong class="ng-binding">ABS is a dedicated team of professionals from diverse construction-related fields. </strong></h3>
+          <p class="tk-aaux-next mg-md text-left tc-prussian-blue ng-binding">Our team includes architects, engineers, and human factors specialists. Fully credentialed and licensed in 22 states, our exceptional team provides attentive, responsive service in a consolidated approach covering the full range of building
+            sciences. </p>
+        </div>
+      </div>
+      <div class="row voffset">
+        <div id="honeyCombContainer" class="honeyCombContainer">
+<!-- ngRepeat: member in filteredMembers[0] -->
+<a class="honeyCombTeam" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="-10 -10 280 316" enable-background="new -10 -10 280 316" xml:space="preserve">
+ <defs>
+   <filter id="bw">
+     <feColorMatrix type="saturate" values="0"/>
+   </filter>
+   <filter id="color">
+     <feColorMatrix type="saturate" values="1"/>
+     <feComponentTransfer result="brightness">
+       <feFuncR type="linear" slope=".7"/>
+       <feFuncG type="linear" slope=".7"/>
+       <feFuncB type="linear" slope=".7"/>
+     </feComponentTransfer>
+   </filter>
+   <filter id="blur" x="-5%" y="-5%">
+     <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+   </filter>
+ <clipPath id="hex-mask" clipPathUnits="userSpaceOnUse">
+     <path d="M245,216.3l-115,65.6c-3.1,1.7-6.8,1.7-9.9,0L5,216.3c-3.1-1.8-5-5.1-5-8.7V76.7c0-3.6,1.9-6.9,5-8.7L120,1.3
+   c3.1-1.8,6.9-1.8,10,0L245,68c3.1,1.8,5,5.1,5,8.7v130.9C250,211.2,248.1,214.5,245,216.3z"></path>
+   </clipPath>
+</defs>
+ <g filter="url(#blur)">
+   <rect clip-path="url(#hex-mask)" height="100%" width="100%" fill="rgba(0,0,0,.3)" ></rect>
+ </g>
+ <rect clip-path="url(#hex-mask)" height="100%" width="100%" fill="rgba(255,255,255,1)" ></rect>
+ <rect clip-path="url(#hex-mask)" height="100%" width="100%" fill="#81c04e" transform="scale(.893) translate(15, 15)" ></rect>
+
+ <image clip-path="url(#hex-mask)" transform="scale(.893) translate(15, 15)" height="296" width="250" xlink:href="//images.contentful.com/lxejsmju70ex/1A4evXLRPeESOimkgWYGgm/8fc9407159ed0a87c8f871e56059236c/ABS-Team-Scott-Harvey__2x.jpg" preserveAspectRatio="xMidYMin slice" ></image>
+</svg>
+ <p class="ng-binding">Scott Harvey</p>
+</a>
+        <div class="honeyCombContainer" id="honeyCombContainer">
+          <!-- ngRepeat: member in filteredMembers[0] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[0]">
+            <div class="shadow">
+              <div class="hexContainer" id="hexContainer">
+                <div class="hexThumb" id="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/1A4evXLRPeESOimkgWYGgm/8fc9407159ed0a87c8f871e56059236c/ABS-Team-Scott-Harvey__2x.jpg" alt="Scott Harvey Bio Pic" src="//images.contentful.com/lxejsmju70ex/1A4evXLRPeESOimkgWYGgm/8fc9407159ed0a87c8f871e56059236c/ABS-Team-Scott-Harvey__2x.jpg">
+                  <p
+                    class="ng-binding">Scott Harvey</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[0] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[0]">
+            <div class="shadow">
+              <div class="hexContainer" id="hexContainer">
+                <div class="hexThumb" id="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/1cvMm0B9nAySsUesO8MiyY/5bfce97fb607c48c2d35ba521e5493f4/ABS_Headshots_Jason-Gregorie.jpg" alt="Jason  Gregorie Bio Pic" src="//images.contentful.com/lxejsmju70ex/1cvMm0B9nAySsUesO8MiyY/5bfce97fb607c48c2d35ba521e5493f4/ABS_Headshots_Jason-Gregorie.jpg">
+                  <p
+                    class="ng-binding">Jason Gregorie</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[0] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[0]">
+            <div class="shadow">
+              <div class="hexContainer" id="hexContainer">
+                <div class="hexThumb" id="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/1aJp9rxMk228KSSakkOiCE/6a1587ea58743883bb16336710b50969/ABS_Headshots_Alan-Campbell.jpg" alt="Alan Campbell Bio Pic" src="//images.contentful.com/lxejsmju70ex/1aJp9rxMk228KSSakkOiCE/6a1587ea58743883bb16336710b50969/ABS_Headshots_Alan-Campbell.jpg">
+                  <p
+                    class="ng-binding">Alan O. Campbell</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[0] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[0]">
+            <div class="shadow">
+              <div class="hexContainer" id="hexContainer">
+                <div class="hexThumb" id="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/3sT8YR0nziOkSmAsMMyoc6/d88746b6d0e057d23ae13e6cee523364/ABS_Headshots_Al-Schweickhardt.jpg" alt="Al Schweickhardt Bio Pic" src="//images.contentful.com/lxejsmju70ex/3sT8YR0nziOkSmAsMMyoc6/d88746b6d0e057d23ae13e6cee523364/ABS_Headshots_Al-Schweickhardt.jpg">
+                  <p
+                    class="ng-binding">Al Schweickhardt</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[0] -->
+          <!-- ngRepeat: member in filteredMembers[1] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[1]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/30v4JspFnGOOCWsK8Yicci/314c938b6cd426d46222c40cdfa22f98/ABS_Headshots_Luis-Mariaca.jpg" src="//images.contentful.com/lxejsmju70ex/30v4JspFnGOOCWsK8Yicci/314c938b6cd426d46222c40cdfa22f98/ABS_Headshots_Luis-Mariaca.jpg">
+                  <p
+                    class="ng-binding">Luis Mariaca</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[1] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[1]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/4Wwx1HvL4QW0ciUeCCWsoK/552a9b86848b0531528966b3857999e4/ABS_Headshots_Taylor-Cox.jpg" src="//images.contentful.com/lxejsmju70ex/4Wwx1HvL4QW0ciUeCCWsoK/552a9b86848b0531528966b3857999e4/ABS_Headshots_Taylor-Cox.jpg">
+                  <p
+                    class="ng-binding">Taylor Cox</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[1] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[1]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/IPtZ3TZcUmkGk6WO86OSs/14218583085039b3740f383d76a38e4a/ABS_Headshots_Bobby-Funcik.jpg" src="//images.contentful.com/lxejsmju70ex/IPtZ3TZcUmkGk6WO86OSs/14218583085039b3740f383d76a38e4a/ABS_Headshots_Bobby-Funcik.jpg">
+                  <p
+                    class="ng-binding">Bobby Funcik</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[1] -->
+          <!-- ngRepeat: member in filteredMembers[2] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[2]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/FeQGeTdRK0YyokQMQcuso/014b27a277b73b1658de5b77336951f5/ABS_Headshots_Parker-Shields.jpg" src="//images.contentful.com/lxejsmju70ex/FeQGeTdRK0YyokQMQcuso/014b27a277b73b1658de5b77336951f5/ABS_Headshots_Parker-Shields.jpg">
+                  <p
+                    class="ng-binding">Parker Shields</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[2] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[2]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/2mel6V3e8UIaKCCIkssISU/a723f045b6fc9bed8887f4556af2c1fd/ABS_Headshots_Richard-Dixon.jpg" src="//images.contentful.com/lxejsmju70ex/2mel6V3e8UIaKCCIkssISU/a723f045b6fc9bed8887f4556af2c1fd/ABS_Headshots_Richard-Dixon.jpg">
+                  <p
+                    class="ng-binding">Richard Dixon</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[2] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[2]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/63RYRjDMSkWywqgGWyooSk/fe7c461edcf309fcc5ff7aa8a5ca9163/ABS_Headshots_Preston-Dukes.jpg" src="//images.contentful.com/lxejsmju70ex/63RYRjDMSkWywqgGWyooSk/fe7c461edcf309fcc5ff7aa8a5ca9163/ABS_Headshots_Preston-Dukes.jpg">
+                  <p
+                    class="ng-binding">Preston Dukes</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[2] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[2]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/4TndxKC6sokeeseW8YqCiU/0e4358536bdc2000da8054b2f40328d8/ABS_Headshots_Eddie-Polk.jpg" src="//images.contentful.com/lxejsmju70ex/4TndxKC6sokeeseW8YqCiU/0e4358536bdc2000da8054b2f40328d8/ABS_Headshots_Eddie-Polk.jpg">
+                  <p
+                    class="ng-binding">Edward Polk</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[2] -->
+          <!-- ngRepeat: member in filteredMembers[3] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[3]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/66gidWwV3y44uG20GySiCW/a8b49df14cb17680aed5e06aa407a92d/ABS_Headshots_Steve-Moore.jpg" src="//images.contentful.com/lxejsmju70ex/66gidWwV3y44uG20GySiCW/a8b49df14cb17680aed5e06aa407a92d/ABS_Headshots_Steve-Moore.jpg">
+                  <p
+                    class="ng-binding">L. Steven Moore</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[3] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[3]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/39uWoa3gDuI8i8SYMYSeCs/4de7c9c0f4718b6d6cc750e7b2496d50/ABS_Headshots_Whitney-Okon.jpg" src="//images.contentful.com/lxejsmju70ex/39uWoa3gDuI8i8SYMYSeCs/4de7c9c0f4718b6d6cc750e7b2496d50/ABS_Headshots_Whitney-Okon.jpg">
+                  <p
+                    class="ng-binding">Whitney E. Schrum</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[3] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[3]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/3HTEEpfVmwuWQ4CCYIayC4/067a1cba07ab8e3995b2d64bf091c699/ABS_Headshots_Stephanie-Borzendowski.jpg" src="//images.contentful.com/lxejsmju70ex/3HTEEpfVmwuWQ4CCYIayC4/067a1cba07ab8e3995b2d64bf091c699/ABS_Headshots_Stephanie-Borzendowski.jpg">
+                  <p
+                    class="ng-binding">Stephanie Borzendowski</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[3] -->
+          <!-- ngRepeat: member in filteredMembers[4] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[4]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/5wKtACVMFq2G2SAoiSw2Ew/dee1276507a66b335aa175a86e22ddd2/ABS_Headshots_Ashley-Avery.jpg" src="//images.contentful.com/lxejsmju70ex/5wKtACVMFq2G2SAoiSw2Ew/dee1276507a66b335aa175a86e22ddd2/ABS_Headshots_Ashley-Avery.jpg">
+                  <p
+                    class="ng-binding">Ashley Avery</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[4] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[4]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/1bFnLuFb0Iwo4E0yose0U6/2da8cc0fce162872e5dfd3021ec59ee3/ABS_Headshots_John-Greenan.jpg" src="//images.contentful.com/lxejsmju70ex/1bFnLuFb0Iwo4E0yose0U6/2da8cc0fce162872e5dfd3021ec59ee3/ABS_Headshots_John-Greenan.jpg">
+                  <p
+                    class="ng-binding">John Greenan</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[4] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[4]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/234mkHc8fqqG20IoSq4s2U/ab36e1b494ebea6902863070d0da3a3d/ABS_Headshots_Lauren-Ulmer.jpg" src="//images.contentful.com/lxejsmju70ex/234mkHc8fqqG20IoSq4s2U/ab36e1b494ebea6902863070d0da3a3d/ABS_Headshots_Lauren-Ulmer.jpg">
+                  <p
+                    class="ng-binding">Lauren Ulmer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[4] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[4]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/4GKsFm7efeuwOGsUK6wcA0/468ae37939ad85ddff25c406051b0c9e/ABS_Headshots_Joseph-Shahid.jpg" src="//images.contentful.com/lxejsmju70ex/4GKsFm7efeuwOGsUK6wcA0/468ae37939ad85ddff25c406051b0c9e/ABS_Headshots_Joseph-Shahid.jpg">
+                  <p
+                    class="ng-binding">M. Joseph Shahid, Jr.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[4] -->
+          <!-- ngRepeat: member in filteredMembers[5] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[5]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/4zDJU9PphC6kYqAWmGIo2k/85c35731c283fae5e961691dfb4e83ca/ABS_Headshots_Wayne-Butler.jpg" src="//images.contentful.com/lxejsmju70ex/4zDJU9PphC6kYqAWmGIo2k/85c35731c283fae5e961691dfb4e83ca/ABS_Headshots_Wayne-Butler.jpg">
+                  <p
+                    class="ng-binding">Wayne Butler</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[5] -->
+          <a class="honeyComb ng-scope" data-toggle="modal" data-target="#myModal" data-ng-click="setCurrentTeamMember(member)" data-ng-repeat="member in filteredMembers[5]">
+            <div class="shadow">
+              <div class="hexContainer">
+                <div class="hexThumb"><img data-ng-src="//images.contentful.com/lxejsmju70ex/2slR1zhMZO0Ak0oUue8cYe/6d0eef8092fd923efca26ba1a13cfb3d/ABS_Headshots_Dawn-Clayton.jpg" src="//images.contentful.com/lxejsmju70ex/2slR1zhMZO0Ak0oUue8cYe/6d0eef8092fd923efca26ba1a13cfb3d/ABS_Headshots_Dawn-Clayton.jpg">
+                  <p
+                    class="ng-binding">Dawn Clayton</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- end ngRepeat: member in filteredMembers[5] -->
+          <!-- ngRepeat: member in filteredMembers[6] -->
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content team">
+          <div class="modal-body"><i class="fa fa-times-circle" data-dismiss="modal"></i>
+            <div class="col-sm-6"><img class="tm img-responsive" alt=""></div>
+            <div class="col-sm-6">
+              <h4 class="tk-aaux-next" style="padding-top: 20px; text-transform: uppercase; padding-bottom: 5px;"><strong class="ng-binding"> ,</strong></h4>
+              <h4 style="padding-bottom: 5px;" class="ng-binding"></h4>
+              <p style="letter-spacing: -0.7px; line-height: 1.3em; padding-bottom: 15px;" class="ng-binding"></p>
+              <div style="display: block;">
+                <p><a class="tk-industry ng-binding" data-ng-href="mailto:" style="font-size: 16px; color: rgb(115, 181, 61); display: inline; text-decoration: underline; text-transform: uppercase; margin-right: 10px; letter-spacing: 0.1em;" href="mailto:">EMAIL </a>
+                  <nbsp>
+                  </nbsp>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,24 +1,184 @@
 <div id="header">
-    <div class="navbar navbar-default navbar-fixed-top role=" navigation "">
+    <div id="bloc-0" class="bloc bgc-white l-bloc navBig">
+      <div class="container bloc-sm">
+        <nav class="navbar navbar-default navbar-fixed-top navShadow" data-ng-class="slide.workNav ? 'navShadow' : 'noShadow' || slide.serviceNav ? 'navShadow' : 'noShadow' || slide.teamNav ? 'navShadow' : 'noShadow'" style="background-color: white;">
+          <div class="navbar-header">
+            <div class="navbar-brand" data-ui-sref="home" style="padding-left: 5vh; height: 180px;" href="/"><img src="img/ABS_logo.png" alt="logo" width="247" style="cursor: pointer; text-align: center; padding-top: 20px; padding-bottom: 20px;"></div>
+          </div>
+          <div class="navbar-collapse navbar-1 collapse hidden-md" style="box-shadow: rgba(0, 0, 0, 0.35) 1.5px 2.598px 27px 0px;">
+            <ul class="site-navigation nav navbar-nav" style="border-top: none;">
+              <li class="bttn">
+                <div id="team" class="tk-industry customText selectedGreen" data-ng-class="mainPage === 'team' ? 'active' : 'selectedGreen' "><a href="/team">TEAM</a></div>
+              </li>
+              <li>
+                <div id="work" class="tk-industry customText selectedGreen" data-ui-sref="work({service: defaultWorkService})" data-ng-click="setWorkService()" data-ng-class="mainPage === 'work' ? 'active' : 'selectedGreen' " href="/work/">WORK</div>
+              </li>
+              <li>
+                <div id="services" class="tk-industry customText selectedGreen" data-ng-click="setSelectedService()" data-ui-sref="services()" data-ng-class="mainPage === 'services' ? 'active' : 'selectedGreen' " href="/services/">SERVICES</div>
+              </li>
+              <li style="text-align: center; padding-top: 10px; padding-bottom: 10px;"><a class="tk-industry btn btn-lg btn-sq blueContact" data-ui-sref="contact" data-ng-class="page === 'contact' ? 'greenContact' : 'blueContact'" style="cursor: pointer; color: white; line-height: 21px; font-weight: bold; margin: auto; width: 180px; text-align: center; padding-top: 5px; padding-bottom: 5px;"
+                  href="/contact">CONTACT</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <nav class="navbar navbar-default navSmall" style="z-index: 20; display: none; padding-top: 10px;">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a data-ui-sref="home" style="padding-left: 5vh; height: 180px;" href="/">
-            <img src="img/ABS_logo.png" alt="logo" width="247" style="cursor: pointer; text-align: center; padding-top: 20px; padding-bottom: 20px;">
-          </a>
+        <div class="navbar-header"><button class="navbar-toggle" data-toggle="collapse" data-target="#toggleNav"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div class="navbar-brand"
+            data-ui-sref="home" href="/"><img src="img/ABS_logo.png" alt="logo" width="247" style="cursor: pointer;"></div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right nav-bar-options">
-            <li><a id="teamButton" href="/team" data-ui-sref-active="activeUnderline">Team</a></li>
-            <li><a id="workButton" href="/work" data-ui-sref-active="activeUnderline">Work</a></li>
-            <li><a id="servicesButton" href="/services" data-ui-sref-active="activeUnderline">Services</a></li>
-            <li><a id="contactButton" href="/contact" data-ui-sref-active="activeUnderline">Contact</a></li>
+        <div class="collapse navbar-collapse" id="toggleNav" style="height: 100% !important;">
+          <ul class="nav navbar-nav" style="box-shadow: rgba(0, 0, 0, 0.35) 1.5px 2.598px 27px 0px inset; margin-top: -4px; height: 100vh; border-top-style: none;">
+            <li class="dropdown" style="text-align: center;">
+              <p data-ng-class="mainPage === 'team' ? 'active' : 'ltc-royal-blue-traditional'" data-ng-click="teamDropClosed = !teamDropClosed; workDropClosed = true; serviceDropClosed = true" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px; text-transform: uppercase;"
+                class="ltc-royal-blue-traditional">TEAM</p>
+            </li>
+            <ul class="dropMenu ng-hide" data-ng-hide="teamDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 80px; padding-left: 0px; text-align: center; width: 100%;">
+              <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                <div data-ui-sref="team({division: 'Architecture'})" style="cursor: pointer; border-bottom: 1px solid white; padding-top: 15px; padding-bottom: 20px; color: white; text-transform: uppercase;" href="/team">ARCHITECTURE</div>
+              </li>
+              <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                <div style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; color: white; text-transform: uppercase;">
+                  <div data-ui-sref="team({division: 'Forensic Consulting'})" href="/team">FORENSIC CONSULTING</div>
+                </div>
+              </li>
+              <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                <div data-ui-sref="team({division: 'Building Enclosure'})" style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; color: white; text-transform: uppercase;" href="/team">BUILDING ENCLOSURE</div>
+              </li>
+              <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                <div data-ui-sref="team({division: 'Life Safety &amp; Human Factors'})" style="cursor: pointer; border-bottom: 1px solid white; padding-bottom: 20px; color: white; text-transform: uppercase;" href="/team">LIFE SAFETY &amp; HUMAN FACTORS</div>
+              </li>
+              <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                <div data-ui-sref="team({division: 'Engineering'})" style="cursor: pointer; padding-bottom: 20px; color: white; text-transform: uppercase;" href="/team">ENGINEERING</div>
+              </li>
+            </ul>
+            <li class="dropdown" style="text-align: center;">
+              <p data-ng-click="workDropClosed = !workDropClosed; teamDropClosed = true; serviceDropClosed = true" data-ng-class="mainPage === 'work' ? 'active' : 'ltc-royal-blue-traditional'" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px;"
+                class="ltc-royal-blue-traditional">WORK</p>
+            </li>
+            <ul class="dropMenu ng-hide" data-ng-hide="workDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 160px; padding-left: 0px; text-align: center; width: 100%;">
+              <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                <!-- ngRepeat: serviceProvided in allWorkServicesProvided -->
+                <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                  href="/work/">Building Enclosure</div>
+                <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                  href="/work/">Forensic Consulting</div>
+                <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                  href="/work/">Life Safety &amp; Human Factors</div>
+                <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                  href="/work/">Architecture</div>
+                <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+                <div data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ui-sref="work({service: serviceProvided})" data-ng-click="setWorkService(serviceProvided)" style="border-bottom: 1px solid white; padding: 20px; color: white;" class="ng-binding ng-scope"
+                  href="/work/">Engineering</div>
+                <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+              </li>
+            </ul>
+            <li class="dropdown" style="text-align: center;">
+              <p data-ng-click="serviceDropClosed = !serviceDropClosed; workDropClosed = true; teamDropClosed = true" data-ng-class="mainPage === 'services' ? 'active' : 'ltc-royal-blue-traditional'" style="cursor: pointer; font-size: 20px; line-height: 5px; padding-top: 15px; padding-bottom: 15px;"
+                class="ltc-royal-blue-traditional">SERVICES</p>
+            </li>
+            <ul class="dropMenu ng-hide" data-ng-hide="serviceDropClosed" style="background-color: rgb(175, 186, 181); margin-top: 260px; padding-left: 0px; text-align: center; width: 100%;">
+              <li style="text-align: center; color: white; padding: 10px; font-size: 16px; list-style: none; margin: 0px; width: 100%;">
+                <!-- ngRepeat: service in allServices -->
+                <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Building Enclosure</div>
+                <!-- end ngRepeat: service in allServices -->
+                <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Forensic Consulting</div>
+                <!-- end ngRepeat: service in allServices -->
+                <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Life Safety &amp; Human Factors</div>
+                <!-- end ngRepeat: service in allServices -->
+                <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Architecture</div>
+                <!-- end ngRepeat: service in allServices -->
+                <div data-ui-sref="services({service: service})" data-ng-repeat="service in allServices" style="border-bottom: 1px solid white; text-align: center; padding: 20px; color: white;" class="ng-binding ng-scope" href="/services/">Engineering</div>
+                <!-- end ngRepeat: service in allServices -->
+              </li>
+            </ul>
+            <li style="margin-right: 10px;"><a data-ui-sref="contact" data-ng-class="page === 'contact' ? 'greenContact' : 'blueContact'" style="color: white; line-height: 5px; font-weight: bold; margin: auto; width: 140px; text-align: center; padding-top: 15px; padding-bottom: 15px;"
+                href="/contact" class="blueContact">CONTACT</a></li>
           </ul>
         </div>
+      </div>
+    </nav>
+    <div class="row subnav-navigation subnavbar slideNav slideNavUp" id="workNav" data-ng-class="slide.workNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+      <!-- ngRepeat: serviceProvided in allWorkServicesProvided -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/work/building-enclosure">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding greenNav"
+          href="/work/">Building Enclosure</div>
+      </div>
+      <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/work/forensic-consulting">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding clearNav"
+          href="/work/">Forensic Consulting</div>
+      </div>
+      <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/work/life-safety-and-human-factors">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding clearNav"
+          href="/work/">Life Safety &amp; Human Factors</div>
+      </div>
+      <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/work/architecture">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding clearNav"
+          href="/work/">Architecture</div>
+      </div>
+      <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="serviceProvided in allWorkServicesProvided" data-ng-click="setWorkService(serviceProvided)" data-ui-sref="work({slug: serviceProvided.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/work/engineering">
+        <div data-ui-sref="work({service: serviceProvided})" data-ng-class="selectedWorkService.fields.pageTitle === serviceProvided.fields.pageTitle ? 'greenNav' : 'clearNav'" style="border-right: 1px solid white; text-transform: uppercase;" class="ng-binding clearNav"
+          href="/work/">Engineering</div>
+      </div>
+      <!-- end ngRepeat: serviceProvided in allWorkServicesProvided -->
+    </div>
+    <div class="row subnav-navigation subnavbar slideNav slideNavUp" id="serviceNav" data-ng-class="slide.serviceNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+      <!-- ngRepeat: service in allServices -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/services/building-enclosure">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding greenNav" href="/services/">Building Enclosure</div>
+      </div>
+      <!-- end ngRepeat: service in allServices -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/services/building-enclosure">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding clearNav" href="/services/">Forensic Consulting</div>
+      </div>
+      <!-- end ngRepeat: service in allServices -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/services/building-enclosure">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding clearNav" href="/services/">Life Safety &amp; Human Factors</div>
+      </div>
+      <!-- end ngRepeat: service in allServices -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/services/building-enclosure">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding clearNav" href="/services/">Architecture</div>
+      </div>
+      <!-- end ngRepeat: service in allServices -->
+      <div class="subnavitem col-xs-3 col-md-3 ng-scope" data-ng-repeat="service in allServices" data-ng-click="setSelectedService(service)" data-ui-sref="services({slug: selectedService.fields.slug})" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;"
+        href="/services/building-enclosure">
+        <div data-ui-sref="services({service: service})" data-ng-class="selectedService.fields.pageTitle === service.fields.pageTitle ? 'greenNav' : 'clearNav'" style="text-transform: uppercase;" class="ng-binding clearNav" href="/services/">Engineering</div>
+      </div>
+      <!-- end ngRepeat: service in allServices -->
+    </div>
+    <div class="row subnav-navigation subnavbar slideNav slideNavUp" id="teamNav" data-ng-class="slide.teamNav ? 'slideNavDown' : 'slideNavUp'" style="background-color: rgb(197, 206, 202); overflow-x: scroll; overflow-y: hidden; white-space: nowrap;">
+      <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ng-click="setDivision('Architecture')" data-ui-sref="team({division: 'Architecture'})" data-ng-class="headerDivision.current === 'ARCHITECTURE'" style="border-right: 1px solid white;" href="/team">ARCHITECTURE</div>
+      </div>
+      <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ng-click="setDivision('Forensic Consulting')" data-ui-sref="team({division: 'Forensic Consulting'})" data-ng-class="headerDivision.current === 'Forensic Consulting'" style="border-right: 1px solid white;" href="/team">FORENSIC CONSULTING</div>
+      </div>
+      <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ng-click="setDivision('Building Enclosure')" data-ui-sref="team({division: 'Building Enclosure'})" data-ng-class="headerDivision.current === 'Building Enclosure'" style="border-right: 1px solid white;" href="/team">BUILDING ENCLOSURE</div>
+      </div>
+      <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ng-click="setDivision('Life Safety &amp; Human Factors')" data-ui-sref="team({division: 'Life Safety &amp; Human Factors'})" data-ng-class="headerDivision.current === 'Life Safety &amp; Human Factors'" href="/team">LIFE SAFETY &amp; HUMAN FACTORS</div>
+      </div>
+      <div class="subnavitem col-xs-3 col-md-3" style="border-left: none; border-right: 1px solid white; width: 20%; display: inline-block !important;">
+        <div data-ng-click="setDivision('Engineering')" data-ui-sref="team({division: 'Engineering'})" data-ng-class="headerDivision.current === 'Engineering'" href="/team">ENGINEERING</div>
       </div>
     </div>
 </div>

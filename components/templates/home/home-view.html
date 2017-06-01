@@ -14,7 +14,7 @@
       <div id="bloc-2" class="bloc bg-Halftone-Pattern tc-prussian-blue bgc-white" style="background-color: rgb(246, 246, 246); box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 8px 4px inset; height: 80%;">
         <div class="container bloc-lg">
           <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
+            <div class="col-sm-12 col-md-8 col-sm-offset-2">
               <p class="text-left ng-isolate-scope" data-marked="home.fields.whoWeAreContent">
               </p>
               <p class="text-left ng-isolate-scope" data-marked="home.fields.whoWeAreContentCloser" style="font-weight: 600 !important;">
@@ -23,15 +23,15 @@
             <div class="col-sm-12" style="margin-left: 0px !important;"><br>
               <div class="text-center"><i class="fa fa-2x fa-angle-down icon-green-ryb"></i></div>
               <h3 class="mg-md text-center tc-green-ryb tk-industry" style="margin-top: 0px;">WHAT WE DO.</h3><br><br></div>
-            </div>
           </div>
         </div>
-        <div class="container" style="background-color: rgb(255, 255, 255); min-width: 100% !important;">
-  <div class="col-md-12" style="z-index: 2;">
-    <div style="display: block; margin: auto; text-align: center;">
-      <div id="honeyHex">
-        <div class="homeHoneyThree">
-          <a class="honeyCombHome"  data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Building Enclosure'">
+      </div>
+      <div class="container" style="background-color: rgb(255, 255, 255); min-width: 100% !important;">
+        <div class="col-md-12" style="z-index: 2;">
+          <div style="display: block; margin: auto; text-align: center;">
+            <div id="honeyHex">
+              <div class="homeHoneyThree">
+                <a class="honeyCombHome" data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Building Enclosure'">
             <img class="overlayer" src="img/ABS-HomeHex-building-enclosure-green.png" style="position:absolute" />
             <img class="honeyThumb" src="img/ABS-HomeHex-building-enclosure-hover.png" />
             <div class="hexText" style="height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;">
@@ -39,7 +39,7 @@
                 {{service.fields.pageTitle}}</p>
             </div>
           </a>
-        <a class="honeyCombHome"  data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Forensic Consulting'">
+                <a class="honeyCombHome" data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Forensic Consulting'">
           <img class="overlayer" src="img/ABS-HomeHex-forensic-consulting-green.png" style="position:absolute" />
           <img class="honeyThumb" src="img/ABS-HomeHex-forensic-consulting-hover.png" />
           <div class="hexText" style="height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;">
@@ -47,7 +47,7 @@
               {{service.fields.pageTitle}}</p>
           </div>
         </a>
-        <a class="honeyCombHome"  data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Life Safety & Human Factors'">
+                <a class="honeyCombHome" data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Life Safety & Human Factors'">
           <img class="overlayer" src="img/ABS-HomeHex-life-safety-human-factors-green.png" style="position:absolute" />
           <img class="honeyThumb" src="img/ABS-HomeHex-life-safety-human-factors-hover.png" />
           <div class="hexText" style="height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;">
@@ -55,9 +55,9 @@
               {{service.fields.pageTitle}}</p>
           </div>
         </a>
-        </div>
-        <div class="homeHoneyTwo">
-          <a class="honeyCombHome"  data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Architecture'">
+              </div>
+              <div class="homeHoneyTwo">
+                <a class="honeyCombHome" data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Architecture'">
             <img class="overlayer" src="img/ABS-HomeHex-architecture-green.png" style="position:absolute" />
             <img class="honeyThumb" src="img/ABS-HomeHex-architecture-hover.png" />
             <div class="hexText" style="height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;">
@@ -65,7 +65,7 @@
                 {{service.fields.pageTitle}}</p>
             </div>
           </a>
-          <a class="honeyCombHome"  data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Engineering'">
+                <a class="honeyCombHome" data-ng-repeat="service in homeCtrl.allServices | orderBy: 'fields.priority'" data-ng-href="/{{service.fields.slug}}" data-ng-if="service.fields.pageTitle === 'Engineering'">
             <img class="overlayer" src="img/ABS-HomeHex-engineering-green.png" style="position:absolute" />
             <img class="honeyThumb" src="img/ABS-HomeHex-engineering-hover.png" />
             <div class="hexText" style="height:284px;padding-top:53%;width:253px;position:absolute;z-index:2;text-align:center;top:-10px;padding-left:28px;padding-right:28px;">
@@ -73,13 +73,25 @@
                 {{service.fields.pageTitle}}</p>
             </div>
           </a>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div id="bloc-5" class="bloc bg-Halftone-Pattern tc-prussian-blue bgc-white" style="background-color: rgb(246, 246, 246); box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 8px 4px inset; z-index: 1;">
+        <div class="container bloc-lg">
+          <div class="row">
+            <div class="col-sm-12"><br><br>
+              <h2 class="mg-md text-center tk-industry tc-prussian-blue">PROJECT SPOTLIGHT</h2>
+              <h3 class="mg-md text-center tk-industry tc-prussian-blue ng-isolate-scope" data-marked="contentfulData.fields.projectSpotlightTitle"></h3>
+              <p data-marked="contentfulData.fields.projectSpotlightContent" style="margin-bottom: 65px;" class="ng-isolate-scope">
+              </p>
+              <div class="text-center"><a class="btn btn-lg btn-wire wire-btn-green-ryb btn-sq ng-binding" data-ui-sref="workDetail({obj: contentfulData.fields.projectSpotlightLink})" style="cursor: pointer;" href="/work-detail/">LEARN MORE</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <br>
   </div>
 </div>
-    </div>
-  </div>
-</div>
-</br>

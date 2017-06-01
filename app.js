@@ -40,8 +40,7 @@ angular.module('app', [
                 .state('site.about', require('./components/templates/about/about-controller'))
                 .state('site.contact', require('./components/templates/contact/contact-controller'))
                 .state('site.services', require('./components/templates/services/services-controller'))
-                .state('site.board-list', require('./components/templates/board/board-list-controller'))
-                .state('site.board-member', require('./components/templates/board/board-member-controller'))
+                .state('site.team', require('./components/templates/team/team-controller'))
             $locationProvider.html5Mode({
                 enabled: true,
                 requireBase: false,

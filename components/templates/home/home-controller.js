@@ -28,7 +28,21 @@ function HomeController($scope, $state, store, $window, contentful) {
 			}
 		}
 	});
-
+	var left = true
+		$scope.certsLeft = []
+		$scope.certsRight = []
+		contentful.entries('content_type=home').then(function(res) {
+			$scope.contentfulData = res.data.items[0]
+			angular.forEach($scope.contentfulData.fields.certsAndLicenses, function(entry) {
+				if(left === true) {
+					$scope.certsLeft.push(entry)
+					left = false
+				} else {
+					$scope.certsRight.push(entry)
+					left = true
+				}
+			})
+		});
 	vm.allServices = [];
 	contentful.entries('content_type=serviceTypes').then(function(res) {
 		console.log(res);
@@ -37,4 +51,16 @@ function HomeController($scope, $state, store, $window, contentful) {
   				vm.allServices.push(entry)
   		});
 	});
+	$scope.allServicesProvided = []
+	$scope.allServiceTypes = []
+	$scope.goToService = function (service) {
+		console.log(service)
+		}
+	$scope.goToWorkProjects = function (workProjects) {
+			console.log(workProjects)
+		};
+	$scope.allWorkProjects = []
+		contentful.entries('content_type=workProjects').then(function(res) {
+			$scope.allWorkProjects = res.data.items
+		});
 }
