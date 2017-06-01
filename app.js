@@ -30,8 +30,8 @@ angular.module('app', [
             });
             // Contentful configs
             contentfulProvider.setOptions({
-                space: 't2wg3bafv0z8',
-                accessToken: '4ea268c4881b7dd9851ab42d784589b65ad86b5c60c82582972a57504b5f8e0d',
+                space: 'lxejsmju70ex',
+                accessToken: '2ef82748feb6fd9e7d78f7103794d27612337c3499abc02d7f21c1fb4ee5c627',
             });
             $urlRouterProvider.otherwise('/*');
             $stateProvider

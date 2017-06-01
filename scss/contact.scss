@@ -1,0 +1,163 @@
+::-webkit-scrollbar {
+ display: none;
+}
+.honeyCombRow{
+  width:750px;
+  display:block;
+  margin:0 auto;
+  height:200px;
+  position:relative;
+}
+.honeyCombContact{
+  height:280px;
+}
+.honeyText{
+  position:absolute;
+  left:0px;
+  top:-20px;
+  z-index:2;
+  width:250px;
+  text-align:center;
+  cursor: pointer;
+}
+.honeyText:hover {
+transition: all .2s ease;
+opacity:.7;
+}
+.contactCombImg{
+  position:absolute;
+  left:0px;
+  top:-75px;
+  z-index:2;
+  width:250px
+}
+.contactCombImg2{
+  position:absolute;
+  left:250px;
+  top:-75px;
+  z-index:2;
+  width:250px
+}
+.contactCombImg3{
+  position:absolute;
+  left:500px;
+  top:-75px;
+  z-index:2;
+  width:250px
+}
+.selectedGreen {
+  color: #73B53d;
+}
+.nonSelectedBlue {
+  color: #0b1e60;
+  h4{
+    padding-top:28px;
+  }
+
+}
+.topMargin{
+  margin-top:-65px;
+}
+@media(max-width:992px){
+  .topMargin{
+    margin-top:0px;
+  }
+  .honeyComb{
+    span{
+      max-width:200px;
+    }
+  }
+
+}
+@media(max-width:790px) {
+  .honeyCombRow{
+    width:100% !important;
+    height:800px !important;
+  }
+
+
+  #charlotteOfficeHoneyComb{
+    position:inherit !important;
+    left:0 !important;
+    top:0 !important;
+    margin: auto;
+    display: block;
+    width:250px;
+  }
+  #ballentineOfficeHoneyComb{
+    position:inherit !important;
+    left:0 !important;
+    top:0 !important;
+    margin: auto;
+    display: block;
+    width:250px;
+  }
+  #charlestonOfficeHoneyComb{
+    position:inherit !important;
+    left:0 !important;
+    top:0 !important;
+    margin: auto;
+    display: block;
+    width:250px;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  .honeyText{
+    position:inherit !important;
+    z-index: 10;
+    margin: auto;
+    margin-top: -210px;
+    margin-bottom: 50px;
+    display: block;
+    width: 250px;
+  }
+.breakMargin{
+  margin-bottom: -30px;
+}
+}
+.blueContact {
+  background-color:#0b1e60;
+}
+.greenContact {
+  background-color: #73b53d;
+}
+.blueContact:hover {
+  background-color: #73B53d !important;
+}
+.greenContact:hover {
+  background-color: #0b1e60 !important;
+}
+#contactPage {
+ .modalQuestion{
+   color: #718A50;
+ }
+ .address{
+   font-family: "futura-pt",sans-serif;
+   font-style: normal;
+   font-weight: 100;
+   color: #5d635a;
+ }
+ h6{
+   text-transform:none !important;
+   font-size:15px !important;
+ }
+  a {
+  color: #5d635a;
+ }
+}
+
+.contact {
+  margin-left:60px;
+  font-size: 15px;
+}
+
+
+.infoOffice {
+  width: 100px;
+
+}
+@media(max-width:700px) {
+  .contactFormSubmitButton{
+    margin-left:22%;
+  }
+}

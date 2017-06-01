@@ -22,10 +22,6 @@ const router = new express.Router();
 const mg = require('nodemailer-mailgun-transport');
 const nodemailer = require ('nodemailer');
 
-const MapboxClient = require('mapbox');
-
-const client = new MapboxClient('pk.eyJ1IjoiaG9zZWEtc2FuZHN0cm9tIiwiYSI6ImNqM2J3eW91aTAwNDEyd3BmeWJ0eXV5ODUifQ.dVR5zV-pArYiQKYWVqvS7Q');
-
 
 // Set the port
 app.set('port', process.env.PORT || 5000);
@@ -40,13 +36,9 @@ const server = app.listen(app.get('port'), function() {
 app.use(gzippo.staticGzip(`${__dirname}/www`));
 app.use(compression(`${__dirname}/www`));
 app.use(cors());
-app.use(prerender).set('prerenderServiceUrl', 'https://demo-v1-om.herokuapp.com/').set('prerenderToken', process.env.PRERENDER_TOKEN);
+app.use(prerender).set('prerenderServiceUrl', 'https://appliedbuildingsciences.com/').set('prerenderToken', process.env.PRERENDER_TOKEN);
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 
-client.geocodeForward('Chester, NJ', function(err, data, res) {
-  // data is the geocoding result as parsed JSON
-  // res is the http response, including: status, headers and entity properties
-});
 
 const forceSsl = function(req, res, next) {
 	if (req.headers['x-forwarded-proto'] !== 'https') {

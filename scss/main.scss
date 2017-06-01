@@ -1,0 +1,205 @@
+.hide {
+   position: absolute !important;
+   top: -9999px !important;
+   left: -9999px !important;
+}
+.container{
+  max-width:100% !important;
+}
+.navcontainer{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+}
+.subnavitem{
+  padding:0;
+}
+.subNav{
+	position:fixed;
+  display:none;
+	z-index:5;
+  background: rgba(152,160,156,1);
+background: -moz-linear-gradient(top, rgba(152,160,156,1) 0%, rgba(189,199,195,1) 24%, rgba(197,206,202,1) 41%, rgba(197,206,202,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(152,160,156,1)), color-stop(24%, rgba(189,199,195,1)), color-stop(41%, rgba(197,206,202,1)), color-stop(100%, rgba(197,206,202,1)));
+background: -webkit-linear-gradient(top, rgba(152,160,156,1) 0%, rgba(189,199,195,1) 24%, rgba(197,206,202,1) 41%, rgba(197,206,202,1) 100%);
+background: -o-linear-gradient(top, rgba(152,160,156,1) 0%, rgba(189,199,195,1) 24%, rgba(197,206,202,1) 41%, rgba(197,206,202,1) 100%);
+background: -ms-linear-gradient(top, rgba(152,160,156,1) 0%, rgba(189,199,195,1) 24%, rgba(197,206,202,1) 41%, rgba(197,206,202,1) 100%);
+background: linear-gradient(to bottom, rgba(152,160,156,1) 0%, rgba(189,199,195,1) 24%, rgba(197,206,202,1) 41%, rgba(197,206,202,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98a09c', endColorstr='#c5ceca', GradientType=0 );
+	width:100%;
+	top:130px;
+}
+.subnav-scroll{
+
+}
+.subnav-navigation {
+  height:65px;
+}
+
+.flex-center{
+  display:flex;
+  justify-content:center;
+}
+
+.subnav-navigation  div{
+  display: inline-block;
+
+  text-align: center;
+  height: 100%;
+  list-style: none;
+  bottom: 0;
+  a{
+    color:#1a2c68;
+    font-weight:400;
+    font-family: "Industry", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: .1em;
+    line-height:15px;
+    font-size:13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 200px;
+  }
+}
+.subnav-navigation  div:hover{
+  a{
+    background-color:rgba(115,181,61,.75);
+  }
+}
+.subnavbar{
+
+}
+
+.hexagon{
+  .col-md-6{
+    margin-top:-60px;
+  }
+
+
+}
+
+@media (max-width: 767px){
+
+
+}
+
+
+@media (max-width: 767px){
+  .navBig{
+    display:none;
+  }
+  .bloc{
+    margin-top:0px !important;
+  }
+  .honeyCombContainer{
+    width:100% !important;
+    margin-top: 40px !important;
+    position:inherit !important;
+    height:auto !important;
+  }
+  .hexBreak{
+    margin-top: -210px;
+  }
+  .hexBottom{
+    padding-bottom: 90px;
+  }
+  .hexResponsive{
+    width:100% !important;
+    a{
+      position: relative !important;
+      left: auto !important;
+      right: auto !important;
+      text-align: center;
+      margin:auto;
+      display:block;
+    }
+  }
+  .navSmall{
+    display:block !important;
+  }
+}
+@media (max-width: 892px)
+{
+
+  .hexagon{
+    .col-md-6{
+      margin-top:50px;
+    }
+    .hexImg{
+      margin-top:-150px !important;
+    }
+    .hxImg{
+      margin-top:-135px !important;
+    }
+    .gallery-text{
+      top: -70px;
+    }
+  }
+}
+#over
+{
+    width:100%;
+    height:100%;
+    text-align: center; /*handles the horizontal centering*/
+}
+/*handles the vertical centering*/
+.Centerer
+{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.Centered
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+.gallery-image{
+display:table-cell;
+vertical-align:middle;
+text-align:center;
+
+}
+.gallery-text{
+  position: absolute;
+  color:#73B53D;
+   top: -90px;
+   left: 0;
+   text-align: center;
+   width: 100%;
+
+  h4{
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:.1em;
+    line-height:20px;
+  }
+  h5{
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:0 !important;
+    line-height:20px;
+  }
+  p{
+    font-size:16px;
+    letter-spacing:0;
+    line-height:20px;
+  }
+  a{
+    letter-spacing:.1em;
+    padding-top:10px;
+    font-size:13px;
+    text-decoration:underline;
+    color:#73B53D;
+    line-height:15px;
+  }
+}
+
+@import 'home.scss';
+@import 'team.scss';
+@import 'contact.scss';
+@import 'work.scss';
+@import 'hex.scss';
+@import 'workDetail.scss'

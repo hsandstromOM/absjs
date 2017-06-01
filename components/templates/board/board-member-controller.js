@@ -16,7 +16,7 @@ function TeamMemberController($scope, $stateParams, $state, store, contentful, $
     vm.detailHref = 'team-member';
     vm.parentPage = {
         'text': 'TEAM MEMBERS',
-        'link': 'site.team-list'
+        'href': "/team"
     };
 
     var getContenfulData = function () {
@@ -44,12 +44,4 @@ function TeamMemberController($scope, $stateParams, $state, store, contentful, $
     }
 
     getContenfulData();
-    window.addEventListener('scroll', setMargin);
-    setMargin();
-
-    function setMargin() {
-        var navShortView = document.getElementsByClassName("navShortView")[0].clientHeight + 50;
-        var pageId = document.getElementById("memberView");
-        if (navShortView && pageId) pageId.setAttribute("style", "padding-bottom:" + navShortView + "px;");
-    };
 }

@@ -1,26 +1,28 @@
 <div id="memberView">
-
-<div class="topBanner">
-  <a class="tk-clarendon-wide backToListView" data-ui-sref="{{memberCtrl.parentPage.link}}">&nbsp< BACK TO
+  <div class="team">
+    <div class="topBanner">
+      <a class="button tk-clarendon-wide" href="{{memberCtrl.parentPage.href}}">&nbsp< BACK TO
     {{memberCtrl.parentPage.text}}</a>
-</div>
-<div class="clearfix"></div>
-<div class="col-md-6">
-  <div class="eventBlock col-md-12">
-      <img data-ng-src="{{memberCtrl.currentMember.fields.image.fields.file.url}}" alt="{{memberCtrl.currentMember.fields.image.fields.description || memberCtrl.currentMember.image.fields.title}}">
-  </div>
-</div>
-<div class="col-md-6 memberInfo">
-  <h6 class="tk-futura-pt memberName">{{memberCtrl.currentMember.fields.name}}</h6>
-  <h6 class="tk-futura-pt memberTitle" data-ng-if="memberCtrl.currentMember.fields.title">{{memberCtrl.currentMember.fields.title}}</h6>
-  <h6>{{currentNews.fields.authors.fields.name || currentNews.fields.newsArticle.fields.authors.fields.name}}</h6>
-  <div class="memberBody">
-    <div class="tk-futura-pt" id="newsbody" data-marked="memberCtrl.currentMember.fields.info"></div>
-  </div>
-</div>
-<div class="col-md-12 memberGallery">
-  <a class="galleryImages col-md-4" data-ng-repeat="member in memberCtrl.allMembers | orderBy:'last'" data-ng-href="/{{memberCtrl.detailHref}}/{{member.fields.slug}}" alt="{{teamMember.fields.image.fields.description || teamMember.fields.image.title}}">
-    <img ng-src="{{member.fields.thumbnail.fields.file.url || member.fields.image.fields.file.url}}" alt="" class="unselectedMembers">
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-md-6">
+      <div class="eventBlock col-md-12">
+        <img data-ng-src="{{memberCtrl.currentMember.fields.teamMemberImage.fields.file.url}}" alt="{{memberCtrl.currentMember.fields.teamMemberImage.fields.description || memberCtrl.currentMember.teamMemberImage.fields.title}}">
+      </div>
+    </div>
+    <div class="col-md-6 memberInfo">
+      <h6 class="tk-futura-pt memberName">{{memberCtrl.currentMember.fields.firstName}}{{memberCtrl.currentMember.fields.lastName}}</h6>
+      <h6 class="tk-futura-pt memberTitle" data-ng-if="memberCtrl.currentMember.fields.teamMemberTitle">{{memberCtrl.currentMember.fields.teamMemberTitle}}</h6>
+      <div class="memberBody">
+        <div class="tk-futura-pt" id="newsbody" data-marked="memberCtrl.currentMember.fields.teamMemberCopy"></div>
+      </div>
+    </div>
+    <div class="col-md-12 memberGallery">
+      <a class="galleryImages col-md-4" data-ng-repeat="member in memberCtrl.allMembers | orderBy: 'fields.priority'" data-ng-href="/{{memberCtrl.detailHref}}/{{member.fields.slug}}" alt="{{teamMember.fields.teamMemberImage.fields.description || teamMember.fields.teamMemberImage.title}}">
+    <img ng-src="{{member.fields.teamMemberImage.fields.file.url || member.fields.teamMemberImage.fields.file.url}}" alt="" class="unselectedMembers">
+    <p class="tk-futura-pt">{{member.fields.firstName}}{{member.fields.lastName}}</p>
+    <p class="tk-futura-pt" data-ng-if="member.fields.teamMemberTitle">{{member.fields.teamMemberTitle}}</p>
   </a>
-</div>
+    </div>
+  </div>
 </div>
