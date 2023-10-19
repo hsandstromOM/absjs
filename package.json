@@ -9,7 +9,7 @@
     "angular": "^1.4.7",
     "angular-contentful": "^2.0.0",
     "angular-cookies": "^1.4.7",
-    "angular-jwt": "0.0.9",
+    "angular-jwt": "0.1.10",
     "angular-mapboxgl-directive": "^0.37.0",
     "angular-marked": "^1.2.0",
     "angular-resource": "^1.5.6",
